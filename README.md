@@ -5,9 +5,7 @@ Health CRM is a web-based Customer Relationship Management (CRM) system tailored
 ## Features
 
 - Patient management (add, edit, view, delete)
-- Appointment scheduling and tracking
-- Communication logs
-- Dashboard with analytics
+- Appointment scheduling and tracking (add, edit, view, delete)
 - Responsive UI built with React
 
 ## Getting Started
