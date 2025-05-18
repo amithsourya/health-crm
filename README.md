@@ -2,6 +2,10 @@
 
 Health CRM is a web-based Customer Relationship Management (CRM) system tailored for healthcare providers. It helps manage patient information, appointments, and communications efficiently.
 
+## Live Demo
+
+[View the app on Vercel](https://health-crm-seven.vercel.app/)
+
 ## Features
 
 - Patient management (add, edit, view, delete)
