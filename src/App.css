@@ -1,3 +1,51 @@
+body, .nature-bg {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  min-height: 100vh;
+  /* Nature-inspired gradient background with SVG leaves overlay */
+  background: linear-gradient(135deg, #e3f0fb 0%, #c8e6c9 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.nature-bg::before {
+  content: '';
+  position: fixed;
+  top: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: url("data:image/svg+xml;utf8,<svg width='400' height='400' xmlns='http://www.w3.org/2000/svg'><ellipse cx='200' cy='200' rx='180' ry='120' fill='%23a5d6a7' fill-opacity='0.18'/><ellipse cx='120' cy='100' rx='60' ry='30' fill='%239be7a6' fill-opacity='0.13'/><ellipse cx='300' cy='300' rx='80' ry='40' fill='%237ec8a5' fill-opacity='0.10'/></svg>");
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatLeaves 18s ease-in-out infinite alternate;
+}
+
+.nature-bg::after {
+  content: '';
+  position: fixed;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: url("data:image/svg+xml;utf8,<svg width='350' height='350' xmlns='http://www.w3.org/2000/svg'><ellipse cx='175' cy='175' rx='140' ry='90' fill='%23b2dfdb' fill-opacity='0.15'/><ellipse cx='250' cy='250' rx='60' ry='30' fill='%2381d4fa' fill-opacity='0.12'/></svg>");
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatLeaves2 22s ease-in-out infinite alternate;
+}
+
+@keyframes floatLeaves {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(40px) scale(1.04);}
+}
+@keyframes floatLeaves2 {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-30px) scale(1.03);}
+}
+
 .App {
   text-align: center;
 }
@@ -14,14 +62,42 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+  padding: 2rem 0 1rem 0;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  animation: headerDrop 0.8s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes headerDrop {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.App-header h1 {
+  color: #1976d2;
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #e3f0fb;
+  animation: fadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+main {
+  min-height: 80vh;
+  padding-bottom: 2rem;
+  animation: mainFadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  z-index: 2;
 }
 
 .App-link {
@@ -35,4 +111,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  color: #1976d2;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.Module p,
+.Module .dashboard-summary p,
+.Module .report-card p,
+.Module .widget p {
+  color: #234;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0.5rem 0 0.5rem 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.Module .primary-btn,
+button,
+input[type="submit"] {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-label {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.Module label,
+.form-group label {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1976d2;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.3px;
+}
+
+.Module input,
+.Module select,
+input,
+select {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #234;
 }
