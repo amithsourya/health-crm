@@ -15,7 +15,7 @@ function Footer() {
       marginTop: '2rem'
     }}>
       &copy; {new Date().getFullYear()} by Amith Sourya Sadineni &nbsp;|&nbsp;
-      <a href="https://github.com/amithsourya/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline' }}>
+      <a href="https://github.com/amithsourya/health-crm/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline' }}>
         GitHub
       </a>
       &nbsp;|&nbsp;

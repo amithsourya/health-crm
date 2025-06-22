@@ -2,12 +2,21 @@
 
 Health CRM is a web-based Customer Relationship Management (CRM) system tailored for healthcare providers. It helps manage patient information, appointments, and communications efficiently.
 
+## Live Demo
+
+[View the app live on Vercel](https://health-crm-seven.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/3b5718f9-5470-48b0-979e-a6183113ba5c)
+![image](https://github.com/user-attachments/assets/93bf87ca-0e40-4a1e-a6f2-16cf78e60fbd)
+![image](https://github.com/user-attachments/assets/3de798b9-d019-46cb-ad03-b1348eb4211c)
+![image](https://github.com/user-attachments/assets/c1aaf145-0611-45ac-b9d4-cdb76fe2b52e)
+![image](https://github.com/user-attachments/assets/34eeb267-ad64-411c-b8b7-c98b1a543a8c)
+![image](https://github.com/user-attachments/assets/d6b93870-94f0-4d6f-ada2-287c256f5c2e)
+
 ## Features
 
 - Patient management (add, edit, view, delete)
-- Appointment scheduling and tracking
-- Communication logs
-- Dashboard with analytics
+- Appointment scheduling and tracking (add, edit, view, delete)
 - Responsive UI built with React
 
 ## Getting Started

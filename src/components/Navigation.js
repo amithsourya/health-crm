@@ -6,7 +6,7 @@ const navLinkStyle = {
   textDecoration: 'none',
   fontWeight: 500,
   fontSize: '1.08rem',
-  padding: '0.35em 1.1em',
+  padding: '0.35em 0.4em',
   borderRadius: '6px',
   transition: 'background 0.18s, color 0.18s',
   margin: '0 0.1em',
